@@ -1,2 +1,10 @@
-package PACKAGE_NAME;public class PanelExpendedor {
+import java.awt.*;
+
+public class PanelExpendedor {
+    public PanelExpendedor(){
+
+    }
+    public Graphics paint(){
+
+    }
 }
