@@ -1,4 +1,4 @@
-package com.example;
+package tarea3;
  abstract class Bebida extends Producto {
 
     public Bebida(int serie,PrecioProducto precioProducto) {

@@ -1,4 +1,4 @@
-package com.example;
+package tarea3;
 
 enum PrecioProducto {
     COCA(1000),

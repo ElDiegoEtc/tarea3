@@ -1,4 +1,4 @@
-package com.example;
+package tarea3;
 class Sprite extends Bebida {
 
     public Sprite(int serie, PrecioProducto precioProducto) {

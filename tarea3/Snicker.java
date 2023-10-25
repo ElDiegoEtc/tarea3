@@ -1,4 +1,4 @@
-package com.example;
+package tarea3;
 
 public class Snicker extends Dulce {
     public Snicker(int serie, PrecioProducto precioProducto) {

@@ -1,4 +1,4 @@
-package com.example;
+package tarea3;
 abstract class Moneda implements Comparable<Moneda>{
 
     public Moneda() {

@@ -1,4 +1,4 @@
-package com.example;
+package tarea3;
 
 class Moneda500 extends Moneda {
 

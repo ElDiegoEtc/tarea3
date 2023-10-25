@@ -1,4 +1,4 @@
-package com.example;
+package tarea3;
 
 public class Comprador{
     private String sonido;

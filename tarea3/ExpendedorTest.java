@@ -1,4 +1,4 @@
-package com.example;
+package tarea3;
 /*
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
