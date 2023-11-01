@@ -5,7 +5,8 @@ public class Comprador{
     private int vuelto;
 
     public Comprador(Moneda m, int eleccion, Expendedor exp) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
-        Producto p = exp.comprarProducto(m, eleccion);
+        exp.comprarProducto(m, eleccion);
+        Producto p = exp.getProducto();
 
         Moneda moneda = null;
         while ((moneda = exp.getVuelto()) != null) {

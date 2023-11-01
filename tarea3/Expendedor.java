@@ -1,5 +1,7 @@
 package tarea3;
 
+import java.awt.*;
+
 /**
  * @class
  */
@@ -11,6 +13,11 @@ class Expendedor {
     private DepositoGenerico<Producto> snicker;
     private DepositoGenerico<Producto> super8;
     private DepositoGenerico<Moneda> monedasVuelto;
+
+    //Tarea3
+    private DepositoGenerico<Moneda> depositoEspecialMonedas;
+    private DepositoGenerico<Producto> depositoEspecial;
+
 
     /**
      *
@@ -24,6 +31,8 @@ class Expendedor {
         snicker = new DepositoGenerico<>();
         super8 = new DepositoGenerico<>();
         monedasVuelto = new DepositoGenerico<>();
+        //Tarea3
+        depositoEspecialMonedas = new DepositoGenerico<>();
 
         for (BucleProducto producto : BucleProducto.values()) {
             for (int i = 0; i < cantidadProductos; i++) {
@@ -48,9 +57,12 @@ class Expendedor {
      * @param eleccion
      * @return
      */
-    public Producto comprarProducto(Moneda m, int eleccion) throws NoHayProductoException,
+    public void comprarProducto(Moneda m, int eleccion) throws NoHayProductoException,
             PagoInsuficienteException, PagoIncorrectoException {
         Producto p = null;
+        //Tarea3
+        depositoEspecial = new DepositoGenerico<>();
+
         if (m == null) throw new PagoIncorrectoException ("Pago no relizado");
         if (m.getValor() < precioProductos) throw new PagoInsuficienteException("Pago Insuficiente, " + m.getValor());
         if (m != null && m.getValor() >= precioProductos) {
@@ -77,10 +89,12 @@ class Expendedor {
                     monedasVuelto.addItem(new Moneda100());
                     n--;
                 }
+                //Tarea3
+                depositoEspecialMonedas.addItem(m);
             }
         }
         if (p == null || m.getValor() < precioProductos) monedasVuelto.addItem(m);
-        return p;
+        depositoEspecial.addItem(p);
     }
 
     /**
@@ -90,4 +104,8 @@ class Expendedor {
     public Moneda getVuelto() {
         return monedasVuelto.getItem();
     }
+    public Producto getProducto(){
+        return depositoEspecial.getItem();
+    }
+
 }
