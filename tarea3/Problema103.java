@@ -8,6 +8,7 @@ public class Problema103 {
         Expendedor exp = new Expendedor(2);
         Comprador c;
         Moneda m;
+        PanelPrincipal PP = new PanelPrincipal();
 
         try{
             /*

@@ -1,4 +1,5 @@
 package tarea3;
+import java.awt.*;
 
 /**
  * clase CocaCola que es subclase de Bebida para representar el tipo especifico de bebida
@@ -22,4 +23,8 @@ class CocaCola extends Bebida {
         return "CocaCola";
     }
 
+    public void paint(Graphics g){
+        g.setColor(Color.red);
+        g.drawRect (20, 70, 60, 100);
+    }
 }

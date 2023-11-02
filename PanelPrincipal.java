@@ -13,7 +13,7 @@ public class PanelPrincipal extends JPanel {
     public void paint (Graphics g) { //todo se dibuja a partir de este método
         super.paint(g); //llama al método pint al que hace override en la super
         clase
-//el de la super clase solo pinta el fondo (background)
+        //el de la super clase solo pinta el fondo (background)
         com.paint(g); //llama al metodo paint definido en el PanelComprador
         exp.paint(g); //llama al metodo paint definido en el PanelExpendedor
     }
