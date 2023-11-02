@@ -3,7 +3,7 @@ package tarea3;
 import java.awt.*;
 
 /**
- * @class
+ * @class: Es la clase que dirije las operaciones del expendedor como las comprar, arroja las exepciones, recarga el expendedor, etc
  */
 class Expendedor {
     private int precioProductos;
@@ -20,8 +20,8 @@ class Expendedor {
 
 
     /**
-     *
-     * @param cantidadProductos
+     * Metodo constructor del expendedor que llena el expendedor de productos
+     * @param cantidadProductos: La cantitad de productos con la que inicialmente se llena el expendedor
      */
     public Expendedor(int cantidadProductos) {
         precioProductos = PrecioProducto.COCA.getPrecio(); // Precio base
@@ -51,11 +51,14 @@ class Expendedor {
         }
     }
 
-    /**
+    /** Sirve para que dada una moneda y el numero de un producto, se haga la compra de este y se
+     * almacene en un deposito especial.
      *
-     * @param m
-     * @param eleccion
-     * @return
+     * @param m: La moneda con la que el comprador paga para tener un producto
+     * @param eleccion: El numero asociado al producto que se desea en el expendedor
+     * @throws PagoIncorrectoException: Si no se uso una moneda para comprar el producto, se devuelve un mensaje
+     * @throws PagoInsuficienteException: Si el valor de la moneda con la que se pago es menor al valor del producto, se devuelve un mensaje y la moneda
+     * @throws NoHayProductoException: Si no existe mas del producto seleccionado, se devuelve un mensaje y la moneda
      */
     public void comprarProducto(Moneda m, int eleccion) throws NoHayProductoException,
             PagoInsuficienteException, PagoIncorrectoException {
@@ -98,12 +101,15 @@ class Expendedor {
     }
 
     /**
-     *
-     * @return
+     * @return: devuelve el vuelto
      */
     public Moneda getVuelto() {
         return monedasVuelto.getItem();
     }
+
+    /**
+     * @return: devuelve el item que se compro en esta instancia
+     */
     public Producto getProducto(){
         return depositoEspecial.getItem();
     }
