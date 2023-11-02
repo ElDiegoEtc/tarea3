@@ -1,5 +1,7 @@
 package tarea3;
 
+import java.awt.*;
+
 /**
  * La clase Moneda1500 representa un valor de una momeda de 1500.
  */
@@ -15,5 +17,8 @@ class Moneda1500 extends Moneda {
     public int getValor() {
         return 1500;
     }
-
+    public void paint(Graphics g){
+        g.setColor(Color.RED);
+        g.drawOval(20,50,50,50);
+    }
 }
