@@ -26,7 +26,7 @@ public class Problema103 {
             c = new Comprador(m, 2, exp);
             System.out.println(c.queBebiste() + ", " + c.cuantoVuelto());
 
-            m = new Moneda1000();
+            m = new Moneda1500();
             c = new Comprador(m, 5, exp);
             System.out.println(c.queBebiste() + ",  " + c.cuantoVuelto());
 
