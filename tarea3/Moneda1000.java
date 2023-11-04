@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * La clase Moneda1000 representa un valor de una momeda de 1000.
  */
-class Moneda1000 extends Moneda {
+public class Moneda1000 extends Moneda {
 
     public Moneda1000(Color color) {
         super(color);

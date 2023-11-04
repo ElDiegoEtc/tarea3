@@ -1,11 +1,12 @@
 package tarea3;
 
 import java.awt.*;
+import tarea3.*;
 
 /**
  * La clase Moneda1500 representa un valor de una momeda de 1500.
  */
-class Moneda1500 extends Moneda {
+public class Moneda1500 extends Moneda {
 
     public Moneda1500(Color color) {
         super(color);

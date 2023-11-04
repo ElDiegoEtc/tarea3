@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 /**
  * La clase Moneda100 representa un valor de una momeda de 100.
  */
-class Moneda100 extends Moneda {
+public class Moneda100 extends Moneda {
 
     public Moneda100(Color color) {
         super(color);
