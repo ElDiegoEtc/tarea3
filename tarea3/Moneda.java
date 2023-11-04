@@ -1,11 +1,20 @@
 package tarea3;
 
+import java.awt.*;
+
 /**
  * La clase abstracta Moneda representa una moneda genérica.
  */
-abstract class Moneda implements Comparable<Moneda>{
+public abstract class Moneda implements Comparable<Moneda>{
 
-    public Moneda() {
+    protected Color color;
+
+    public Moneda(Color color) {
+        this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
     }
     /**
      *metodo para obtener la serie de la moneda

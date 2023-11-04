@@ -7,8 +7,8 @@ import java.awt.*;
  */
 class Moneda1000 extends Moneda {
 
-    public Moneda1000() {
-        super();
+    public Moneda1000(Color color) {
+        super(color);
     }
     /**
      * Obtiene el valor de la Moneda1000, en este caso, 100 unidades monetarias
@@ -17,8 +17,5 @@ class Moneda1000 extends Moneda {
     public int getValor() {
         return 1000;
     }
-    public void paint(Graphics g){
-        g.setColor(Color.ORANGE);
-        g.drawOval(30,50,50,50);
-    }
+
 }
