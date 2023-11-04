@@ -20,11 +20,6 @@ class Fanta extends Bebida {
      * @return devuelve string para señalar que es bebiendo
      */
 
-
-    public void paint(Graphics g){
-        g.setColor(Color.orange);
-        g.fillRect(10,30,50,50);
-    }
     public String ingerir(){
         return "Fanta";
     }

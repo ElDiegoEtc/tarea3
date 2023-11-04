@@ -22,9 +22,4 @@ class CocaCola extends Bebida {
     public String ingerir(){
         return "CocaCola";
     }
-
-    public void paint(Graphics g){
-        g.setColor(Color.red);
-        g.drawRect (20, 70, 60, 100);
-    }
 }

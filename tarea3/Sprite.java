@@ -22,9 +22,4 @@ class Sprite extends Bebida {
         return "Sprite";
     }
 
-
-    public void paint(Graphics g) {
-        g.setColor(Color.white);
-        g.fillRect(20, 10, 50, 50);
-    }
 }
