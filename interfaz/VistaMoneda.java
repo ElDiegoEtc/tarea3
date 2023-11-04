@@ -17,9 +17,9 @@ public class VistaMoneda extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // Dibujar la representación gráfica de la moneda
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setColor(moneda.getColor());
+        // No hay método getColor en Moneda, establece el color directamente
+        g2d.setColor(Color.LIGHT_GRAY);
         g2d.fillOval(10, 10, 30, 30);
         g2d.setColor(Color.BLACK);
         g2d.drawString(String.valueOf(moneda.getValor()), 25, 28);

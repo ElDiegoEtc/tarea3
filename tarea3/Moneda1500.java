@@ -8,8 +8,8 @@ import tarea3.*;
  */
 public class Moneda1500 extends Moneda {
 
-    public Moneda1500(Color color) {
-        super(color);
+    public Moneda1500() {
+        super();
     }
 
     /**

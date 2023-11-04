@@ -14,7 +14,10 @@ public class VistaMoneda1000 extends VistaMoneda {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // Aquí puedes personalizar la representación gráfica de la moneda de 1000
-        // Puedes añadir código específico para la representación de la Moneda1000
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(Color.GREEN);
+        g2d.fillOval(10, 10, 30, 30);
+        g2d.setColor(Color.BLACK);
+        g2d.drawString(String.valueOf(moneda.getValor()), 25, 28);
     }
 }

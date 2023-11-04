@@ -7,15 +7,10 @@ import java.awt.*;
  */
 public abstract class Moneda implements Comparable<Moneda>{
 
-    protected Color color;
 
-    public Moneda(Color color) {
-        this.color = color;
+    public Moneda() {
     }
 
-    public Color getColor() {
-        return color;
-    }
     /**
      *metodo para obtener la serie de la moneda
      * @return La serie de la moneda.

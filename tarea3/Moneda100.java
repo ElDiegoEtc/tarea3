@@ -6,8 +6,8 @@ import javax.swing.JPanel;
  */
 public class Moneda100 extends Moneda {
 
-    public Moneda100(Color color) {
-        super(color);
+    public Moneda100() {
+        super();
     }
 
     /**
