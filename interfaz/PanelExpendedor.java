@@ -1,4 +1,4 @@
-package interfaz;
+/*package interfaz;
 import javax.swing.*;
 import tarea3.Expendedor;
 import java.awt.*;
@@ -17,3 +17,4 @@ public class PanelExpendedor extends JPanel {
 
     }
 }
+*/

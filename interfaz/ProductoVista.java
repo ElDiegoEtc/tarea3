@@ -11,8 +11,8 @@ public class ProductoVista {
         this.heigth = height;
     }
 
-    @Override
+   /* @Override
     protected void paint(Graphics g){
 
-    }
+    }*/
 }
