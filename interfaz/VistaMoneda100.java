@@ -12,12 +12,14 @@ public class VistaMoneda100 extends VistaMoneda {
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
+    public void paint(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(Color.RED);
         g2d.fillOval(10, 10, 30, 30);
         g2d.setColor(Color.BLACK);
         g2d.drawString(String.valueOf(moneda.getValor()), 25, 28);
+
+
     }
 }

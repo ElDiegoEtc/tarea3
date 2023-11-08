@@ -2,7 +2,7 @@ package interfaz;
 import javax.swing.*;
 import java.awt.*;
 
-public class PanelPrincipal extends JPanel {
+/*public class PanelPrincipal extends JPanel {
     //se ve en el centro de la ventana
 
     private PanelComprador com;
@@ -20,4 +20,4 @@ public class PanelPrincipal extends JPanel {
         com.paint(g); //llama al metodo paint definido en el PanelComprador
         //exp.paint(g); //llama al metodo paint definido en el PanelExpendedor
     }
-}
+}*/

@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 /**
  * clase Sprite que es subclase de Bebida para representar el tipo especifico de bebida
  */
-class Sprite extends Bebida {
+public class Sprite extends Bebida {
     /**
      * @param serie          El número de serie de la Sprite.
      * @param precioProducto El precio de la Sprite, se representa por un objeto PrecioProducto de tipo SPRITE.

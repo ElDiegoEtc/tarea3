@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * clase Fanta que es subclase de Bebida para representar el tipo especifico de bebida
  */
-class Fanta extends Bebida {
+public class Fanta extends Bebida {
     /**
      *
      * @param serie El número de serie de la Fanta.
