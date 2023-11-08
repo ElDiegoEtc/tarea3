@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * @class: Es la clase que dirije las operaciones del expendedor como las comprar, arroja las exepciones, recarga el expendedor, etc
  */
-class Expendedor {
+public class Expendedor {
     private int precioProductos;
     private DepositoGenerico<Producto> coca;
     private DepositoGenerico<Producto> sprite;

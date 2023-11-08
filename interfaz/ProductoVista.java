@@ -2,7 +2,7 @@ package interfaz;
 
 import java.awt.*;
 
-public class ProductoVista {
+/*public class ProductoVista {
     private int cordx,cordy,width,heigth;
     public ProductoVista(int cordx, int cordy, int width, int height){
         this.cordx = cordx;
@@ -15,4 +15,4 @@ public class ProductoVista {
     protected void paint(Graphics g){
 
     }
-}
+}*/

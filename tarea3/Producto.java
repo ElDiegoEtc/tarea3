@@ -1,6 +1,6 @@
 package tarea3;
 
-abstract class Producto {
+public abstract class Producto {
     private int serie;
     private PrecioProducto precioProducto;
     /**

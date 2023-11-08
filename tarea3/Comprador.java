@@ -38,6 +38,7 @@ public class Comprador{
      * @return vuelto de la compra
      */
     public int cuantoVuelto() {
+
         return vuelto;
     }
 

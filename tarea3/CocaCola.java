@@ -4,7 +4,7 @@ import java.awt.*;
 /**
  * clase CocaCola que es subclase de Bebida para representar el tipo especifico de bebida
  */
-class CocaCola extends Bebida {
+public class CocaCola extends Bebida {
     /**
      *
      * @param serie El número de serie de la CocaCola.

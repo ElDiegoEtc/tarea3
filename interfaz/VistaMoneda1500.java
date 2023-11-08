@@ -12,7 +12,7 @@ public class VistaMoneda1500 extends VistaMoneda {
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
+    public void paint(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(Color.YELLOW);
