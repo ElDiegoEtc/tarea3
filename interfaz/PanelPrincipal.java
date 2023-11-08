@@ -2,7 +2,7 @@ package interfaz;
 import javax.swing.*;
 import java.awt.*;
 
-/*public class PanelPrincipal extends JPanel {
+public class PanelPrincipal extends JPanel {
     //se ve en el centro de la ventana
 
     private PanelComprador com;
@@ -12,6 +12,7 @@ import java.awt.*;
        // exp = new PanelExpendedor();
         com = new PanelComprador();
         this.setBackground(Color.blue);
+        add(com);
     }
 
     public void paint(Graphics g) { //todo se dibuja a partir de este método
@@ -20,4 +21,4 @@ import java.awt.*;
         com.paint(g); //llama al metodo paint definido en el PanelComprador
         //exp.paint(g); //llama al metodo paint definido en el PanelExpendedor
     }
-}*/
+}
