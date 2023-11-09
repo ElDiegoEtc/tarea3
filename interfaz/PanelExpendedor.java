@@ -33,6 +33,20 @@ class PanelExpendedor extends JPanel {
         coinsInserted = 0;
         productDeposit = 0;
 
+       /* Ejecutar expendedor con 10 productos de cada deposito de producto
+                crear interfaz de cada deposito de acuerdo a deposito vista
+
+
+        if(Se hace click en panel expendedor){
+            if(deposito 1 vacio){
+                rellenar;
+            }
+            if(deposito 2 vacio){
+                rellenar;
+            }
+            ....
+        }*/
+
         for (int i = 0; i < 6; i++) {
             buttons[i] = new JButton(String.valueOf(i + 1));
         }
