@@ -35,11 +35,19 @@ class PanelExpendedor extends JPanel {
         JButton InsertarMoneda = new JButton("Insertar Moneda");
         InsertarMoneda.setBounds(50, 370, 150, 30); // Posicionamiento del botón "Insertar Moneda"
         add(InsertarMoneda);
+        JLabel titleLabel = new JLabel("Seleccione Producto", SwingConstants.CENTER);
+        titleLabel.setBounds(50, 150, 150, 30); // Posicionamiento del título "Seleccione Producto"
+        add(titleLabel);
     }
 
     @Override
     protected void paintComponent(Graphics g) {
+
         super.paintComponent(g);
+        // Dibujar el rectángulo que encierra todos los elementos del expendedor
+        g.setColor(Color.BLACK);
+
+        g.drawRect(40, 40, 470, 490);
         // Cambiar el color de fondo de los botones
         for (JButton button : buttons) {
             button.setBackground(Color.PINK);
@@ -63,6 +71,12 @@ class PanelExpendedor extends JPanel {
         g.drawRect(300, 50, 200, 470);
     }
 
-
-    
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Expendedor");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        PanelExpendedor panelExpendedor = new PanelExpendedor();
+        frame.add(panelExpendedor);
+        frame.setSize(550, 600);
+        frame.setVisible(true);
+    }
 }
