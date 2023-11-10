@@ -21,6 +21,9 @@ public class DepositoGenerico<T> {
     public void addItem(T item) {
         items.add(item);
     }
+    public ArrayList<T> getArray() {
+        return items;
+    }
 
     /**
      * Es un getter para el item del arraylist

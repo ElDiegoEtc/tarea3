@@ -1,25 +1,29 @@
 package interfaz;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-
+import tarea3.DepositoGenerico;
+import tarea3.Expendedor;
+import tarea3.Moneda;
+import tarea3.Producto;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 class PanelExpendedor extends JPanel {
     private JButton[] buttons;
     private int coinsInserted;
     private int productDeposit;
+    private Expendedor exp;
+    private DepositosVista<Producto> icoca, isprite, ifanta, isniker, isuper8, iDepositoEspecial;
+    private DepositosVista<Moneda> imonedasVuelto, idepositoEspecialMonedas;
 
     public PanelExpendedor() {
         buttons = new JButton[6];
         coinsInserted = 0;
         productDeposit = 0;
+        
+        exp = new Expendedor(10);
+        icoca = new DepositosVista<>(exp.getCocaDeposito());
+        add(icoca);
 
        /* Ejecutar expendedor con 10 productos de cada deposito de producto
                 crear interfaz de cada deposito de acuerdo a deposito vista
@@ -55,9 +59,9 @@ class PanelExpendedor extends JPanel {
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
+    public void paint(Graphics g) {
 
-        super.paintComponent(g);
+        super.paint(g);
         // Dibujar el rectángulo que encierra todos los elementos del expendedor
         g.setColor(Color.BLACK);
 
@@ -83,6 +87,8 @@ class PanelExpendedor extends JPanel {
         g.fillRect(300, 50, 200, 470);
         g.setColor(Color.BLACK);
         g.drawRect(300, 50, 200, 470);
+
+        icoca.paint(g);
     }
 
     public static void main(String[] args) {
