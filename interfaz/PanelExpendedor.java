@@ -3,21 +3,29 @@ import tarea3.DepositoGenerico;
 import tarea3.Expendedor;
 import tarea3.Moneda;
 import tarea3.Producto;
-
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 class PanelExpendedor extends JPanel {
+    private JTextField cantidadMonedas; // Campo para ingresar cantidad de monedas
+
     private JButton[] buttons;
     private int coinsInserted;
     private int productDeposit;
-    
+
     private Expendedor exp;
     private DepositosVista<Producto> icoca, isprite, ifanta, isniker, isuper8, iDepositoEspecial;
     private DepositosVista<Moneda> imonedasVuelto, idepositoEspecialMonedas;
+    private Button buttonComprar;
+    private tarea3.DepositoGenerico<tarea3.Producto> DepositoProductos;
+    private Label labelVuelto;
 
     public PanelExpendedor() {
+
+        // Creamos los controles
+        buttonComprar = new Button("Comprar");
+        DepositoProductos = new DepositoGenerico<>();
+        labelVuelto = new Label("Vuelto:");
         buttons = new JButton[6];
         coinsInserted = 0;
         productDeposit = 0;
@@ -57,6 +65,14 @@ class PanelExpendedor extends JPanel {
         JLabel titleLabel = new JLabel("Seleccione Producto", SwingConstants.CENTER);
         titleLabel.setBounds(50, 150, 150, 30); // Posicionamiento del título "Seleccione Producto"
         add(titleLabel);
+        buttonComprar.setBounds(150, 200, 150, 30);
+        add(buttonComprar);
+        labelVuelto.setBounds(190, 400, 150, 30);
+        add(labelVuelto);
+        cantidadMonedas = new JTextField();
+        cantidadMonedas.setBounds(50, 340, 150, 30); // Posicionamiento del campo para ingresar la cantidad de monedas
+        add(cantidadMonedas);
+
     }
 
     @Override
