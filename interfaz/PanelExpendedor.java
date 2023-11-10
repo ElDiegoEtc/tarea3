@@ -29,8 +29,20 @@ public class PanelExpendedor extends JPanel {
         expendedor = new tarea3.Expendedor(10);
         icoca = new DepositosVista<>(expendedor.getCocaDeposito());
         add(icoca);
-        /* Ejecutar expendedor con 10 productos de cada deposito de producto
-                crear interfaz de cada deposito de acuerdo a deposito vista
+        isprite = new DepositosVista<>(expendedor.getaSpriteDeposito());
+        add(isprite);
+        ifanta = new DepositosVista<>(expendedor.getFantaDeposito());
+        add(ifanta);
+        isniker = new DepositosVista<>(expendedor.getSnickerDeposito());
+        add(isniker);
+        isuper8 = new DepositosVista<>(expendedor.getSuper8Deposito());
+        add(isuper8);
+        //iDepositoEspecial = new DepositosVista<>(expendedor.getdepositoEspecialDeposito());
+        //add(iDepositoEspecial);
+        //imonedasVuelto = new DepositosVista<>(expendedor.getmonedasVueltoDeposito());
+        //add(imonedasVuelto);
+;
+        /* 
 
 
         if(Se hace click en panel expendedor){

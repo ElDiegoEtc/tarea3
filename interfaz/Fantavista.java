@@ -1,5 +1,8 @@
 package interfaz;
 
+import tarea3.CocaCola;
+import tarea3.Fanta;
+
 import java.awt.*;
 
 /**
@@ -18,8 +21,8 @@ public class Fantavista {
      *
      * @param g Objeto Graphics en el que se dibujará el objeto "Fanta".
      */
-    public void paint(Graphics g){
+    public void paint(Graphics g, Fanta fanta, int x, int y){
         g.setColor(Color.orange);
-        g.fillRect(10, 30, 50, 50);
+        g.fillRect (x, y, 10, 15);
     }
 }

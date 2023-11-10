@@ -1,5 +1,8 @@
 package interfaz;
 
+import tarea3.CocaCola;
+import tarea3.Super8;
+
 import java.awt.*;
 
 /**
@@ -19,8 +22,8 @@ public class Super8vista {
      *
      * @param g Objeto Graphics en el que se dibujará la forma del "Super8".
      */
-    public void paint(Graphics g){
-        g.setColor(Color.black);
-        g.drawRect (20, 70, 40, 80);
+    public void paint(Graphics g, Super8 s8, int x, int y){
+        g.setColor(Color.yellow);
+        g.fillRect (x, y, 10, 15);
     }
 }

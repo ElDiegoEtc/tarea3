@@ -1,5 +1,8 @@
 package interfaz;
 
+import tarea3.CocaCola;
+import tarea3.Sprite;
+
 import java.awt.*;
 
 /**
@@ -18,8 +21,8 @@ public class Spritevista {
      *
      * @param g Objeto Graphics en el que se dibujará el sprite.
      */
-    public void paint(Graphics g) {
-        g.setColor(Color.green);
-        g.fillRect(20, 10, 50, 50);
+    public void paint(Graphics g, Sprite s, int x, int y){
+        g.setColor(Color.white);
+        g.fillRect (x, y, 10, 15);
     }
 }

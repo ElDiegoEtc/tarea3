@@ -1,5 +1,8 @@
 package interfaz;
 
+import tarea3.CocaCola;
+import tarea3.Snicker;
+
 import java.awt.*;
 
 /**
@@ -18,8 +21,8 @@ public class Snickervista {
      *
      * @param g Objeto Graphics donde se realizará el dibujo del objeto "Snickervista".
      */
-    public void paint(Graphics g){
-        g.setColor(Color.red);
-        g.drawRect(20, 70, 60, 70);
+    public void paint(Graphics g, Snicker s, int x, int y){
+        g.setColor(Color.black);
+        g.fillRect (x, y, 10, 15);
     }
 }
