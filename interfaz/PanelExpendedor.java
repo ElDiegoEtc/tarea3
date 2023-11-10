@@ -1,4 +1,5 @@
 package interfaz;
+<<<<<<< HEAD
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,6 +12,22 @@ public class PanelExpendedor extends JPanel {
     private int coinsInserted;
     private int productDeposit;
     private JButton buttonComprar;
+=======
+import tarea3.DepositoGenerico;
+import tarea3.Expendedor;
+import tarea3.Moneda;
+import tarea3.Producto;
+import javax.swing.*;
+import java.awt.*;
+
+class PanelExpendedor extends JPanel {
+    private JTextField cantidadMonedas; // Campo para ingresar cantidad de monedas
+    private JButton[] buttons;
+    private Expendedor exp;
+    private DepositosVista<Producto> icoca, isprite, ifanta, isniker, isuper8, iDepositoEspecial;
+    private DepositosVista<Moneda> imonedasVuelto, idepositoEspecialMonedas;
+    private Button buttonComprar;
+>>>>>>> 9795226bbebf3662019469b777ea9e4666020e5f
     private Label labelVuelto;
     private tarea3.Expendedor expendedor;
     private tarea3.Comprador comprador;
@@ -20,6 +37,7 @@ public class PanelExpendedor extends JPanel {
     public PanelExpendedor() {
         expendedor = new tarea3.Expendedor(10);
 
+<<<<<<< HEAD
         buttonComprar = new JButton("Comprar");
         labelVuelto = new Label("Vuelto:");
         buttons = new JButton[6];
@@ -28,6 +46,31 @@ public class PanelExpendedor extends JPanel {
 /**
  *
  */
+=======
+        // Creamos los controles
+        buttonComprar = new Button("Comprar");
+        labelVuelto = new Label("Vuelto:");
+        buttons = new JButton[6];
+
+        exp = new Expendedor(10);
+        icoca = new DepositosVista<>(exp.getCocaDeposito());
+        add(icoca);
+
+       /* Ejecutar expendedor con 10 productos de cada deposito de producto
+                crear interfaz de cada deposito de acuerdo a deposito vista
+
+
+        if(Se hace click en panel expendedor){
+            if(deposito 1 vacio){
+                rellenar;
+            }
+            if(deposito 2 vacio){
+                rellenar;
+            }
+            ....
+        }*/
+
+>>>>>>> 9795226bbebf3662019469b777ea9e4666020e5f
         for (int i = 0; i < 6; i++) {
             buttons[i] = new JButton(String.valueOf(i + 1));
         }
@@ -142,8 +185,14 @@ public class PanelExpendedor extends JPanel {
      * @param g the <code>Graphics</code> object to protect
      */
     @Override
+<<<<<<< HEAD
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+=======
+    public void paint(Graphics g) {
+
+        super.paint(g);
+>>>>>>> 9795226bbebf3662019469b777ea9e4666020e5f
         // Dibujar el rectángulo que encierra todos los elementos del expendedor
         g.setColor(Color.BLACK);
 
@@ -165,7 +214,11 @@ public class PanelExpendedor extends JPanel {
         g.setColor(Color.BLACK);
         g.drawRect(300, 50, 200, 470);
 
+<<<<<<< HEAD
 
+=======
+        icoca.paint(g);
+>>>>>>> 9795226bbebf3662019469b777ea9e4666020e5f
     }
 
     public static void main(String[] args) {

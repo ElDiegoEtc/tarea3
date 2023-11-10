@@ -114,4 +114,44 @@ public class Expendedor {
         return depositoEspecial.getItem();
     }
 
+    /**
+     * Getter para el depósito de CocaCola
+     * @return: el depósito de CocaCola
+     */
+    public DepositoGenerico<Producto> getCocaDeposito() {
+        return coca;
+    }
+
+    /**
+     * Getter para el depósito de Sprite
+     * @return: el depósito de Sprite
+     */
+    public DepositoGenerico<Producto> getaSpriteDeposito() {
+        return sprite;
+    }
+
+    /**
+     * Getter para el depósito de Fanta
+     * @return: el depósito de Fanta
+     */
+    public DepositoGenerico<Producto> getFantaDeposito() {
+        return fanta;
+    }
+
+    /**
+     * Getter para el depósito de Snicker
+     * @return: el depósito de Snicker
+     */
+    public DepositoGenerico<Producto> getSnickerDeposito() {
+        return snicker;
+    }
+
+    /**
+     * Getter para el depósito de Super8
+     * @return: el depósito de Super8
+     */
+    public DepositoGenerico<Producto> getSuper8Deposito() {
+        return super8;
+    }
+
 }
