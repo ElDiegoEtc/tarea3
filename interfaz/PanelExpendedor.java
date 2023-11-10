@@ -244,13 +244,5 @@ public class PanelExpendedor extends JPanel {
 
 
     }
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Expendedor");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        PanelExpendedor panelExpendedor = new PanelExpendedor();
-        frame.add(panelExpendedor);
-        frame.setSize(550, 600);
-        frame.setVisible(true);
-    }
+    
 }
