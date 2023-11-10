@@ -153,5 +153,20 @@ public class Expendedor {
     public DepositoGenerico<Producto> getSuper8Deposito() {
         return super8;
     }
+    /**
+     * Getter para el depósito del vuelto
+     * @return: el depósito del vuelto
+     */
+    public DepositoGenerico<Moneda> getmonedasVueltoDeposito() {
+        return monedasVuelto;
+    }
+    /**
+     * Getter para el depósito del depositoEspecial
+     * @return: el depósito del depositoEspecial
+     */
+    public DepositoGenerico<Producto> getdepositoEspecialDeposito() {
+        return depositoEspecial;
+    }
+
 
 }

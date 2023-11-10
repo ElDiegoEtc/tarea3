@@ -5,7 +5,7 @@ import java.awt.*;
 
 import tarea3.*;
 
-// VistaMoneda.java - Vista para representar gráficamente una moneda
+
 /**
  * Esta clase es una extensión de JPanel y sirve como base para la representación gráfica de una moneda genérica.
  */
@@ -19,6 +19,6 @@ public class VistaMoneda extends JPanel {
      */
     public VistaMoneda(Moneda moneda) {
         this.moneda = moneda;
-        setPreferredSize(new Dimension(50, 50)); // Tamaño del panel para la moneda
+        setPreferredSize(new Dimension(50, 50));
     }
 }

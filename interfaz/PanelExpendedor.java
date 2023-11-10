@@ -29,10 +29,20 @@ public class PanelExpendedor extends JPanel {
         expendedor = new tarea3.Expendedor(10);
         icoca = new DepositosVista<>(expendedor.getCocaDeposito());
         add(icoca);
-        /* Ejecutar expendedor con 10 productos de cada deposito de producto
-                crear interfaz de cada deposito de acuerdo a deposito vista
-
-
+        isprite = new DepositosVista<>(expendedor.getaSpriteDeposito());
+        add(isprite);
+        ifanta = new DepositosVista<>(expendedor.getFantaDeposito());
+        add(ifanta);
+        isniker = new DepositosVista<>(expendedor.getSnickerDeposito());
+        add(isniker);
+        isuper8 = new DepositosVista<>(expendedor.getSuper8Deposito());
+        add(isuper8);
+        //iDepositoEspecial = new DepositosVista<>(expendedor.getdepositoEspecialDeposito());
+        //add(iDepositoEspecial);
+        //imonedasVuelto = new DepositosVista<>(expendedor.getmonedasVueltoDeposito());
+        //add(imonedasVuelto);
+;
+        /*
         if(Se hace click en panel expendedor){
             if(deposito 1 vacio){
                 rellenar;
@@ -67,7 +77,7 @@ public class PanelExpendedor extends JPanel {
         JPanel panelInstrucciones = new JPanel(new BorderLayout());
         panelInstrucciones.add(instrucciones, BorderLayout.CENTER);
         panelInstrucciones.setBorder(BorderFactory.createTitledBorder("Instrucciones"));
-        panelInstrucciones.setBounds(50, 420, 200, 100); // Ajusta las coordenadas y el tamaño según tu diseño
+        panelInstrucciones.setBounds(50, 420, 200, 100);
 
         add(panelInstrucciones);
 
@@ -116,7 +126,7 @@ public class PanelExpendedor extends JPanel {
         InsertarMoneda.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int valorMoneda = Integer.parseInt(cantidadMonedas.getText());
-                moneda = obtenerMonedaConValor(valorMoneda); // Llamada al método
+                moneda = obtenerMonedaConValor(valorMoneda);
             }
         });
         buttonComprar.addActionListener(new ActionListener() {
@@ -161,7 +171,7 @@ public class PanelExpendedor extends JPanel {
                      *           Obtener el texto del botón presionado
                      */
                     String buttonText = ((JButton) e.getSource()).getText();
-                    eleccionProducto = Integer.parseInt(buttonText); // Asignar la elección del producto
+                    eleccionProducto = Integer.parseInt(buttonText);
                 }
             });
 
@@ -190,9 +200,8 @@ public class PanelExpendedor extends JPanel {
             case 1500:
                 moneda = new tarea3.Moneda1500();
                 break;
-            // Agregar más casos según las monedas disponibles
             default:
-                moneda = null; // Si no se reconoce el valor, retorna null
+                moneda = null;
                 break;
         }
 
@@ -207,38 +216,28 @@ public class PanelExpendedor extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // Dibujar el rectángulo que encierra todos los elementos del expendedor
         g.setColor(Color.BLACK);
 
         g.drawRect(40, 40, 470, 490);
-        // Cambiar el color de fondo de los botones
         for (JButton button : buttons) {
             button.setBackground(Color.PINK);
         }
-        
-        // Dibujar la sección de depósito de productos
+
         g.setColor(Color.LIGHT_GRAY);
         g.fillRect(50, 420, 150, 100);
         g.setColor(Color.BLACK);
         g.drawRect(50, 420, 150, 100);
 
-        // Dibujar la sección del depósito de productos
-        g.setColor(Color.CYAN);
+        g.setColor(Color.gray);
         g.fillRect(300, 50, 200, 470);
         g.setColor(Color.BLACK);
         g.drawRect(300, 50, 200, 470);
         icoca.paint(g);
-
-
+        ifanta.paint(g);
+        isprite.paint(g);
+        isuper8.paint(g);
+        isniker.paint(g);
 
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Expendedor");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        PanelExpendedor panelExpendedor = new PanelExpendedor();
-        frame.add(panelExpendedor);
-        frame.setSize(550, 600);
-        frame.setVisible(true);
-    }
 }
