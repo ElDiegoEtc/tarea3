@@ -12,6 +12,7 @@ class PanelExpendedor extends JPanel {
     private JButton[] buttons;
     private int coinsInserted;
     private int productDeposit;
+    
     private Expendedor exp;
     private DepositosVista<Producto> icoca, isprite, ifanta, isniker, isuper8, iDepositoEspecial;
     private DepositosVista<Moneda> imonedasVuelto, idepositoEspecialMonedas;
