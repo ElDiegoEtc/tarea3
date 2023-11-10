@@ -8,27 +8,19 @@ import java.awt.*;
 
 class PanelExpendedor extends JPanel {
     private JTextField cantidadMonedas; // Campo para ingresar cantidad de monedas
-
     private JButton[] buttons;
-    private int coinsInserted;
-    private int productDeposit;
-
     private Expendedor exp;
     private DepositosVista<Producto> icoca, isprite, ifanta, isniker, isuper8, iDepositoEspecial;
     private DepositosVista<Moneda> imonedasVuelto, idepositoEspecialMonedas;
     private Button buttonComprar;
-    private tarea3.DepositoGenerico<tarea3.Producto> DepositoProductos;
     private Label labelVuelto;
 
     public PanelExpendedor() {
 
         // Creamos los controles
         buttonComprar = new Button("Comprar");
-        DepositoProductos = new DepositoGenerico<>();
         labelVuelto = new Label("Vuelto:");
         buttons = new JButton[6];
-        coinsInserted = 0;
-        productDeposit = 0;
 
         exp = new Expendedor(10);
         icoca = new DepositosVista<>(exp.getCocaDeposito());
