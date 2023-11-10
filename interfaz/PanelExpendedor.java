@@ -20,7 +20,7 @@ class PanelExpendedor extends JPanel {
         buttons = new JButton[6];
         coinsInserted = 0;
         productDeposit = 0;
-        
+
         exp = new Expendedor(10);
         icoca = new DepositosVista<>(exp.getCocaDeposito());
         add(icoca);
