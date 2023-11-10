@@ -19,7 +19,13 @@ public class PanelExpendedor extends JPanel {
     private tarea3.Moneda moneda;
     private DepositosVista<Producto> icoca, isprite, ifanta, isniker, isuper8, iDepositoEspecial;
     private DepositosVista<Moneda> imonedasVuelto, idepositoEspecialMonedas;
+    /**
+     * Constructor de la clase PanelExpendedor. Crea la interfaz gráfica para la interacción del expendedor.
+     */
     public PanelExpendedor() {
+/**
+ * se crea la instancia de expendedor
+ */
         expendedor = new tarea3.Expendedor(10);
         icoca = new DepositosVista<>(expendedor.getCocaDeposito());
         add(icoca);
@@ -36,12 +42,44 @@ public class PanelExpendedor extends JPanel {
             }
             ....
         }*/
+/**
+ * se crea un texto para agregar las instrucciones de uso de la maquina
+ */
+        JTextArea instrucciones = new JTextArea();
+        instrucciones.setText(
+                "1. Ingrese la cantidad de monedas \n" +
+                        "(100, 500, 1000, 1500). \n"+
 
+        "2. Presione 'Insertar Moneda'.\n" +
+                        "3. Seleccione el producto.\n" +
+                        "4. Presione 'Comprar Producto'.\n" +
+                        "5. Recoja su vuelto."
+        );
+        /**
+         * Hace el área de texto transparente
+         */
+        instrucciones.setEditable(false);
+        instrucciones.setOpaque(false);
 
+        /**
+         * Colocar las instrucciones en un panel con borde
+         */
+        JPanel panelInstrucciones = new JPanel(new BorderLayout());
+        panelInstrucciones.add(instrucciones, BorderLayout.CENTER);
+        panelInstrucciones.setBorder(BorderFactory.createTitledBorder("Instrucciones"));
+        panelInstrucciones.setBounds(50, 420, 200, 100); // Ajusta las coordenadas y el tamaño según tu diseño
+
+        add(panelInstrucciones);
+
+/**
+ * se crean los botones para comprar y el label de vuelto
+ */
         buttonComprar = new JButton("Comprar");
         labelVuelto = new Label("Vuelto:");
         buttons = new JButton[6];
-
+/**
+ * se agregan los botones y se me asigna su seria
+ */
         for (int i = 0; i < 6; i++) {
             buttons[i] = new JButton(String.valueOf(i + 1));
         }
@@ -53,7 +91,10 @@ public class PanelExpendedor extends JPanel {
             buttons[i].setBounds(50 + (col * 50), 50 + (row * 50), 50, 50);
             add(buttons[i]);
         }
-
+/**
+ * se crean y añaden los botones para insertar moneda, comprar y la seccion del vuelto
+ * ademas se establecen sus medidas y ubicacion
+ */
         JButton InsertarMoneda = new JButton("Insertar Moneda");
         InsertarMoneda.setBounds(50, 370, 150, 30);
         add(InsertarMoneda);
@@ -62,12 +103,16 @@ public class PanelExpendedor extends JPanel {
         add(titleLabel);
         buttonComprar.setBounds(50, 200, 150, 30);
         add(buttonComprar);
-        labelVuelto.setBounds(50, 250, 150, 30);
+        labelVuelto.setBounds(50, 250, 250, 30);
         add(labelVuelto);
         cantidadMonedas = new JTextField();
         cantidadMonedas.setBounds(50, 340, 150, 30);
         add(cantidadMonedas);
+        titleLabel.setBounds(50, 150, 150, 30);
 
+/**
+ * ActionListener para establecer el valor de las monedas
+ */
         InsertarMoneda.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int valorMoneda = Integer.parseInt(cantidadMonedas.getText());
@@ -79,29 +124,42 @@ public class PanelExpendedor extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 if (moneda != null && eleccionProducto != -1 && expendedor != null) {
                     try {
-                        // Intenta crear un comprador con los datos recopilados
+                        /**
+                         * Intenta crear un comprador con los datos recopilados
+                         */
                         comprador = new tarea3.Comprador(moneda, eleccionProducto, expendedor);
+                        /**
+                         * Actualizar la interfaz con la información de la compra
+                         */
 
-                        // Actualizar la interfaz con la información de la compra
                         labelVuelto.setText("Producto comprado: " + comprador.queBebiste() + ", Vuelto: " + comprador.cuantoVuelto());
                     } catch (tarea3.NoHayProductoException | tarea3.PagoInsuficienteException | tarea3.PagoIncorrectoException ex) {
-                        // Manejar las excepciones específicas aquí
-                        // Por ejemplo, mostrar un mensaje de error en la interfaz
+                        /** Manejar las excepciones específicas aquí
+                         * Por ejemplo, mostrar un mensaje de error en la interfaz
+                         *
+                         */
+
                         labelVuelto.setText("Error: " + ex.getMessage());
                     }
                 } else {
-                    // Manejar si los datos no están completos o válidos
+                    /**
+                     * Manejar si los datos no están completos o válidos
+                     */
                     labelVuelto.setText("Por favor, complete todos los datos antes de comprar.");
                 }
             }
         });
+        /**
+         * ActionListener para los botones de selección de producto
+         */
 
-        // ActionListener para los botones de selección de producto
         for (int i = 0; i < 6; i++) {
             buttons[i].addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    // Obtener el texto del botón presionado
+                    /**
+                     *           Obtener el texto del botón presionado
+                     */
                     String buttonText = ((JButton) e.getSource()).getText();
                     eleccionProducto = Integer.parseInt(buttonText); // Asignar la elección del producto
                 }
@@ -110,7 +168,12 @@ public class PanelExpendedor extends JPanel {
         }
 
     }
-
+    /**
+     * Método para obtener el tipo de moneda según el valor ingresado.
+     *
+     * @param valor El valor numérico de la moneda a obtener.
+     * @return La instancia de la moneda correspondiente al valor ingresado, o null si no se reconoce.
+     */
     private tarea3.Moneda obtenerMonedaConValor(int valor) {
         tarea3.Moneda moneda;
 
@@ -136,6 +199,11 @@ public class PanelExpendedor extends JPanel {
         return moneda;
     }
 
+    /**
+     * Método que dibuja los elementos gráficos del expendedor.
+     *
+     * @param g Objeto Graphics donde se realizará el dibujo.
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
