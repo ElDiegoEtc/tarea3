@@ -1,62 +1,32 @@
 package interfaz;
-<<<<<<< HEAD
+import tarea3.Producto;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import tarea3.DepositoGenerico;
+import tarea3.Expendedor;
+import tarea3.Moneda;
 public class PanelExpendedor extends JPanel {
     private JTextField cantidadMonedas;
     private JButton[] buttons;
     private int coinsInserted;
     private int productDeposit;
     private JButton buttonComprar;
-=======
-import tarea3.DepositoGenerico;
-import tarea3.Expendedor;
-import tarea3.Moneda;
-import tarea3.Producto;
-import javax.swing.*;
-import java.awt.*;
-
-class PanelExpendedor extends JPanel {
-    private JTextField cantidadMonedas; // Campo para ingresar cantidad de monedas
-    private JButton[] buttons;
-    private Expendedor exp;
-    private DepositosVista<Producto> icoca, isprite, ifanta, isniker, isuper8, iDepositoEspecial;
-    private DepositosVista<Moneda> imonedasVuelto, idepositoEspecialMonedas;
-    private Button buttonComprar;
->>>>>>> 9795226bbebf3662019469b777ea9e4666020e5f
+    private tarea3.DepositoGenerico<tarea3.Producto> DepositoProductos;
     private Label labelVuelto;
     private tarea3.Expendedor expendedor;
     private tarea3.Comprador comprador;
     private int eleccionProducto = -1;
     private tarea3.Moneda moneda;
-
+    private DepositosVista<Producto> icoca, isprite, ifanta, isniker, isuper8, iDepositoEspecial;
+    private DepositosVista<Moneda> imonedasVuelto, idepositoEspecialMonedas;
     public PanelExpendedor() {
         expendedor = new tarea3.Expendedor(10);
-
-<<<<<<< HEAD
-        buttonComprar = new JButton("Comprar");
-        labelVuelto = new Label("Vuelto:");
-        buttons = new JButton[6];
-        coinsInserted = 0;
-        productDeposit = 0;
-/**
- *
- */
-=======
-        // Creamos los controles
-        buttonComprar = new Button("Comprar");
-        labelVuelto = new Label("Vuelto:");
-        buttons = new JButton[6];
-
-        exp = new Expendedor(10);
-        icoca = new DepositosVista<>(exp.getCocaDeposito());
+        icoca = new DepositosVista<>(expendedor.getCocaDeposito());
         add(icoca);
-
-       /* Ejecutar expendedor con 10 productos de cada deposito de producto
+        /* Ejecutar expendedor con 10 productos de cada deposito de producto
                 crear interfaz de cada deposito de acuerdo a deposito vista
 
 
@@ -70,7 +40,14 @@ class PanelExpendedor extends JPanel {
             ....
         }*/
 
->>>>>>> 9795226bbebf3662019469b777ea9e4666020e5f
+
+        buttonComprar = new JButton("Comprar");
+        DepositoProductos = new tarea3.DepositoGenerico<>();
+        labelVuelto = new Label("Vuelto:");
+        buttons = new JButton[6];
+        coinsInserted = 0;
+        productDeposit = 0;
+
         for (int i = 0; i < 6; i++) {
             buttons[i] = new JButton(String.valueOf(i + 1));
         }
@@ -96,9 +73,7 @@ class PanelExpendedor extends JPanel {
         cantidadMonedas = new JTextField();
         cantidadMonedas.setBounds(50, 340, 150, 30);
         add(cantidadMonedas);
-/**
- *
- */
+
         InsertarMoneda.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int valorMoneda = Integer.parseInt(cantidadMonedas.getText());
@@ -106,10 +81,6 @@ class PanelExpendedor extends JPanel {
             }
         });
         buttonComprar.addActionListener(new ActionListener() {
-            /**
-             *
-             * @param e the event to be processed
-             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (moneda != null && eleccionProducto != -1 && expendedor != null) {
@@ -134,10 +105,6 @@ class PanelExpendedor extends JPanel {
         // ActionListener para los botones de selección de producto
         for (int i = 0; i < 6; i++) {
             buttons[i].addActionListener(new ActionListener() {
-                /**
-                 *
-                 * @param e the event to be processed
-                 */
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     // Obtener el texto del botón presionado
@@ -150,11 +117,6 @@ class PanelExpendedor extends JPanel {
 
     }
 
-    /**
-     *
-     * @param valor
-     * @return
-     */
     private tarea3.Moneda obtenerMonedaConValor(int valor) {
         tarea3.Moneda moneda;
 
@@ -180,19 +142,9 @@ class PanelExpendedor extends JPanel {
         return moneda;
     }
 
-    /**
-     * 
-     * @param g the <code>Graphics</code> object to protect
-     */
     @Override
-<<<<<<< HEAD
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-=======
-    public void paint(Graphics g) {
-
-        super.paint(g);
->>>>>>> 9795226bbebf3662019469b777ea9e4666020e5f
         // Dibujar el rectángulo que encierra todos los elementos del expendedor
         g.setColor(Color.BLACK);
 
@@ -201,7 +153,7 @@ class PanelExpendedor extends JPanel {
         for (JButton button : buttons) {
             button.setBackground(Color.PINK);
         }
-
+        
         // Dibujar la sección de depósito de productos
         g.setColor(Color.LIGHT_GRAY);
         g.fillRect(50, 420, 150, 100);
@@ -213,12 +165,10 @@ class PanelExpendedor extends JPanel {
         g.fillRect(300, 50, 200, 470);
         g.setColor(Color.BLACK);
         g.drawRect(300, 50, 200, 470);
-
-<<<<<<< HEAD
-
-=======
         icoca.paint(g);
->>>>>>> 9795226bbebf3662019469b777ea9e4666020e5f
+
+
+
     }
 
     public static void main(String[] args) {
