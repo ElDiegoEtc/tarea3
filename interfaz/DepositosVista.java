@@ -1,5 +1,6 @@
 package interfaz;
 
+import tarea3.CocaCola;
 import tarea3.DepositoGenerico;
 
 import javax.swing.*;
@@ -32,7 +33,11 @@ public class DepositosVista<T> extends JPanel{
         // Iterar sobre los elementos de la lista y dibujarlos
         for (int i = 0; i < modelo.getSize(); i++) {
             T item = modelo.getElementAt(i);
-
+            if (item instanceof CocaCola) {
+                CocaCola cocaCola = (CocaCola) item;
+                CocaColavista cocaVista = new CocaColavista();
+                //cocaVista.paint(g, cocaCola, x, y);
+            }
             // Dibujar el nombre del elemento en la posición actual
             g.drawString(item.toString(), x, y);
 

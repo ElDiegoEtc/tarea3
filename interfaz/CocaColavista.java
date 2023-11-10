@@ -8,6 +8,6 @@ public class CocaColavista {
     }
     public void paint(Graphics g){
         g.setColor(Color.red);
-        g.drawRect (20, 70, 60, 100);
+        g.drawRect (20, 70, 20, 20);
     }
 }

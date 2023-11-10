@@ -11,10 +11,7 @@ import tarea3.Moneda;
 public class PanelExpendedor extends JPanel {
     private JTextField cantidadMonedas;
     private JButton[] buttons;
-    private int coinsInserted;
-    private int productDeposit;
     private JButton buttonComprar;
-    private tarea3.DepositoGenerico<tarea3.Producto> DepositoProductos;
     private Label labelVuelto;
     private tarea3.Expendedor expendedor;
     private tarea3.Comprador comprador;
@@ -42,11 +39,8 @@ public class PanelExpendedor extends JPanel {
 
 
         buttonComprar = new JButton("Comprar");
-        DepositoProductos = new tarea3.DepositoGenerico<>();
         labelVuelto = new Label("Vuelto:");
         buttons = new JButton[6];
-        coinsInserted = 0;
-        productDeposit = 0;
 
         for (int i = 0; i < 6; i++) {
             buttons[i] = new JButton(String.valueOf(i + 1));
