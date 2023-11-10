@@ -7,17 +7,17 @@ import java.awt.*;
  */
 public class PanelComprador extends JPanel {
 
-    JLabel texto = new JLabel("Moneda: "); // Etiqueta para mostrar texto
-    JTextField ingresar = new JTextField(4); // Campo de texto para ingresar datos
-    JButton generar = new JButton("Generar Moneda"); // Botón para generar la moneda
+    JLabel texto = new JLabel("Moneda: ");
+    JTextField ingresar = new JTextField(4);
+    JButton generar = new JButton("Generar Moneda");
 
     /**
      * Constructor de la clase PanelComprador. Inicializa y agrega los componentes gráficos al panel.
      */
     public PanelComprador() {
-        add(texto); // Agrega la etiqueta al panel
-        add(ingresar); // Agrega el campo de texto al panel
-        add(generar); // Agrega el botón al panel
+        add(texto);
+        add(ingresar);
+        add(generar);
     }
 
     /**
@@ -27,7 +27,7 @@ public class PanelComprador extends JPanel {
      */
     public void paint(Graphics g) {
         super.paint(g);
-        g.fillRect(0, 50, 300, 500); // Dibuja un rectángulo en el panel
+        g.fillRect(0, 50, 300, 500);
     }
 }
 

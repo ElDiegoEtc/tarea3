@@ -2,7 +2,7 @@ package interfaz;
 import tarea3.*;
 import javax.swing.*;
 import java.awt.*;
-// VistaMoneda100.java - Vista para representar gráficamente una moneda de 100
+
 /**
  * Esta clase extiende la clase VistaMoneda y representa la interfaz gráfica
  * para visualizar una moneda de valor 100.

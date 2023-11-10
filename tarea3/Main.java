@@ -2,14 +2,7 @@ package tarea3;
 import javax.swing.*;
 import interfaz.*;
 
-import interfaz.PanelPrincipal;
-
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-public class Problema103 {
+public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Expendedor");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,15 +23,4 @@ PanelPrincipal p1=new PanelPrincipal();
         frame.setContentPane(p1);
 
         frame.setVisible(true);
-
-        /*
-        Expendedor exp = new Expendedor(2);
-        Comprador c;
-        Moneda m;
-        m = new Moneda1000();
-        c = new Comprador(m, 2, exp);
-        System.out.println(c.queBebiste() + ", " + c.cuantoVuelto());
-         */
-   /* }
-}
-*/
+ */
